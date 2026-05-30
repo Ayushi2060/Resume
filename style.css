@@ -1,0 +1,513 @@
+* -------------------- Global -------------------- */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* -------------------- Header -------------------- */
+#body-header {
+  height: 65vh;
+  opacity: 0.8;
+  background-image: url(bg_img.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 1.2rem;
+}
+
+/* -------------------- Navigation -------------------- */
+.no-list-style {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.horizontal-list {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color:black;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #007bff;
+}
+
+/* Mobile dropdown */
+.dropdown-menu {
+  position: relative;
+  display: none;
+}
+
+.bars {
+  font-size: 26px;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 150px;
+}
+
+.dropdown-list ul li {
+  padding: 10px;
+  text-align: right;
+}
+
+.dropdown-list ul li a {
+  color: #333;
+}
+
+.dropdown-list.show {
+  display: block;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .dropdown-menu {
+    display: block;
+  }
+}
+
+/* -------------------- Name & Social Icons -------------------- */
+#name-social-container {
+  margin-top: 20vh;
+  text-align: center;
+}
+
+#my-name {
+  font-size: 5rem;
+  letter-spacing: 0.1rem;
+  color: black;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.social-icons li a i {
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+
+.social-icons li a i:hover {
+  box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+}
+
+/* -------------------- Section -------------------- */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+section:nth-child(2n) {
+  background-color: #9e9b9b29;
+}
+
+section:nth-child(2n + 1) {
+  background-color: white;
+}
+
+.section-heading {
+  width: auto;
+  padding: 20px 10px 10px;
+  font-weight: 400;
+}
+
+.section-heading span {
+  font-size: 40px;
+  color: #2857a4;
+  display: inline-block;
+  padding-top: 10px;
+  margin-right: 0.5rem;
+}
+
+/* -------------------- About -------------------- */
+#About {
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+#my-image {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  margin-top: -17vh;
+}
+
+#my-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 1px 1px 10px 2px lightgrey;
+}
+
+#About-para {
+  padding: 10px;
+  width: 70%;
+  text-align: justify;
+  color: grey;
+  line-height: 28px;
+  font-size: 1.1rem;
+  margin: auto;
+}
+
+/* -------------------- Skills -------------------- */
+.skills-display {
+  width: 75%;
+  padding: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.skill-progress {
+  width: 11rem;
+  height: 2.2rem;
+  background-color: lightgrey;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 2px 1px #b9b9b9 inset;
+  margin: 25px;
+  overflow: hidden;
+}
+
+.skill-progress > div {
+  border-radius: 20px 0 0 20px;
+  box-shadow: 1px 1px 5px 2px #989882;
+}
+
+.skill-name span {
+  color: white;
+  font-size: 1rem;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* -------------------- Timeline -------------------- */
+.timeline {
+  position: relative;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+/* Divider line */
+.timeline-divider {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  border-left: 2px dashed #0096fa6b;
+  height: 65%;
+}
+
+/* Timeline boxes */
+.timeline-box {
+  position: relative;
+  width: 40%;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 40px 0;
+}
+
+.timeline-box:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-box:nth-child(even) {
+  left: 55%;
+  text-align: left;
+}
+
+.timeline-box::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY( -50%);
+  width: 14px;
+  height: 14px;
+  background: #2857a4;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.timeline-box:nth-child(odd)::after {
+  right: -39px;   /* moves dot to divider */
+}
+
+.timeline-box:nth-child(even)::after {
+  left: -41px;    /* moves dot to divider */
+}
+
+/* Traveller (Car / Plane) */
+.timeline-traveller {
+  position: sticky;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  z-index: 10;
+  animation: moveTraveller 3s ease-in-out infinite;
+}
+
+
+#Experience .timeline-traveller i {
+  transform: rotate(90deg);
+}
+
+#Education .timeline-traveller i {
+  transform: rotate(0deg);
+}
+
+/* -------------------- Responsive fixes -------------------- */
+@media (max-width: 768px) {
+  .timeline {
+    width: 90%;
+  }
+
+  .timeline-divider {
+    left: 1%;
+    transform: none;
+  }
+
+  .timeline-box,
+  .timeline-box:nth-child(even),
+  .timeline-box:nth-child(odd),
+  .timeline-box:last-child {
+    width: 90%;
+    left: 5%;
+    text-align: left;
+  }
+
+  .timeline-box::after {
+    left: -4%;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  .timeline-traveller {
+    left: 8%;
+    transform: none;
+  }
+}
+
+/* -------------------- Portfolio -------------------- */
+#portfolio-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 50px;
+  margin-bottom: 20px;
+  justify-content: space-around;
+}
+
+.portfolio-image-container {
+  max-width: 300px;
+  overflow: hidden;
+  margin: 30px;
+  position: relative;
+}
+
+.portfolio-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.portfolio-details {
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  color: transparent;
+  text-align: center;
+  padding: 10px;
+}
+
+.portfolio-image-container:hover {
+  box-shadow: 0 0 20px #74ADC8;
+}
+
+.portfolio-image-container:hover .portfolio-details {
+  background-color: #80808078;
+  color: white;
+}
+
+/* -------------------- Contact -------------------- */
+#contact {
+  background-image: linear-gradient(50deg, #2857a4 0%, #403066 74%);
+  color: white;
+  padding-bottom: 40px;
+}
+
+#contact-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#my-details-container {
+  width: 35%;
+  margin-left: 6%;
+}
+
+#my-details-container h3 {
+  font-weight: 550;
+  font-size: 1.2rem;
+}
+
+#my-details-container p {
+  color: black;
+  font-size: 0.9rem;
+}
+
+.my-details-info-container {
+  margin-bottom: 20px;
+  color: black;
+  font-size: 1rem;
+}
+
+.my-details-info-container i {
+  color: rgb(17, 16, 16);
+}
+
+#contact-form-container {
+  width: 50%;
+}
+
+#contact-form {
+  margin-left: 20%;
+}
+
+#contact-form input,
+#contact-form textarea {
+  max-width: 90%;
+  margin: 15px;
+  padding: 4px 10px;
+  border: 0;
+  border-bottom: 2px solid black;
+  color: black;
+  background: transparent;
+  width: 90%;
+  font-size: 1.05rem;
+}
+
+#contact-form button[type="submit"] {
+  background: transparent;
+  font-size: 0.95rem;
+  border: 2px solid black;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 2px;
+  color: darkblue;
+  font-weight: 700;
+  letter-spacing: 0.046875em;
+  padding: 0.8em;
+  text-transform: uppercase;
+}
+
+#contact-form button:hover {
+  background: white;
+  color: #13386f;
+}
+
+/* -------------------- Utilities -------------------- */
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.mb75px {
+  margin-bottom: 75px;
+}
+
+.mb50px {
+  margin-bottom: 50px;
+}
+
+.text-highlight {
+  color: #2857a4;
+  font-weight: 600;
+}
+
+.mb-blue {
+  background-color: #2857a4;
+}
+
+.mb-orange {
+  background-color: #ec4d1c;
+}
+
+.mb-teal {
+  background-color: #0b8176;
+}
+
+.mb-light-purple {
+  background-color: #93738c;
+}
+
+/* Skill bar widths */
+.eighty-five-percent {
+  width: 85%;
+  height: inherit;
+}
+
+.eighty-percent {
+  width: 80%;
+  height: inherit;
+}
+
+.sixty-five-percent {
+  width: 65%;
+  height: inherit;
+}
+
+.fifty-percent {
+  width: 50%;
+  height: inherit;
+}
+.forty-five-percent {
+  width: 45%;
+  height: inherit;
+} 
